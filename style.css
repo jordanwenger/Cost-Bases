@@ -1,0 +1,230 @@
+*::before, *::after, * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Reusable Styles */
+
+:root {
+    --background: rgb(229, 245, 240);
+    --accent: #324849;
+    --secondary-accent: #e8e2e2;
+    --third-accent: #5b8486;
+    --text: #324849;
+    --family-1: 'Kablammo', cursive;
+    --family-2: 'Limelight', cursive;
+    --family-3: 'Oooh Baby', cursive;
+    --family-4: 'Rubik Moonrocks', cursive;
+    
+}
+
+.container {
+    max-width: 1400px;
+    justify-content: center;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+/* Header */
+
+body {
+    position: relative;
+}
+
+header {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    color: var(--text);
+    position: relative;
+    width: 100%;
+    background-image: url('/cb_images/blob-scene-haikei.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.flex {
+    padding: 2em;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--accent);
+}
+
+.logo h3 {
+    padding-top: 0.3em;
+    padding-left: 0.5em;
+    font-size: 30px;
+    font-family: var(--family-2);
+}
+
+
+.nav {
+    display: flex;
+    list-style: none;
+}
+
+.list-item {
+    text-decoration: none;
+    color: var(--text);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-block;
+    position: relative;
+    padding: 1em 0em;
+    margin: 0em 1em;
+}
+
+.list-item::before {
+    content: "";
+    height: 3px;
+    bottom: 0px;
+    width: 100%;
+    opacity: 0;
+    transition: 300ms;
+    position: absolute;
+    background-color: var(--accent);
+    left: 0;
+}
+
+.list-item:hover::before {
+    bottom: 7px;
+    opacity: 1;
+}
+
+
+li + li {
+    margin-left: 1em;
+}
+
+.hamburger {
+    display: none;
+}
+
+
+
+
+/* Button */
+
+.abs-butt {
+    position: absolute;
+    top: 276px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
+}
+
+.abs-butt a {
+    padding: 1em 3em;
+    background-color: var(--accent);
+    text-decoration: none;
+    color: #ffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 300ms;
+    border: 1px solid var(--accent);
+}
+
+.abs-butt a:hover {
+    background-color: #ffff;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+
+
+
+/* Hero */
+
+.rest {
+    height: 1000px;
+    background-color: var(--secondary-accent);
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.card-wrap {
+    display: flex;
+    padding: 10em 2em;
+    justify-content: space-evenly;
+}
+
+.card {
+    height: 550px;
+    width: 30%;
+    max-width: 250px;
+    background-color: #ffff;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.card h2 {
+    font-family: var(--family-2);
+    display: flex;
+    justify-content: center;
+    padding: 1em 0em;
+    width: 100%;
+    background-color: var(--third-accent);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.card h3 {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-weight: 200;
+    font-size: 14px;
+    align-items: center;
+}
+
+.price-size {
+    padding: 0em 0.3em;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+@media (max-width: 750px) {
+    .card-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .card {
+        width: 95%;
+        max-width: 350px;
+        margin-bottom: 2em;
+        height: 500px;
+    }
+
+    .caravan {
+        display: flex;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
