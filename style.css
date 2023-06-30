@@ -16,6 +16,7 @@
     --family-2: 'Limelight', cursive;
     --family-3: 'Oooh Baby', cursive;
     --family-4: 'Rubik Moonrocks', cursive;
+    --family-5: 'Poppins', sans-serif;
     
 }
 
@@ -38,6 +39,7 @@
 
 body {
     position: relative;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -63,7 +65,7 @@ header {
     display: flex;
     cursor: pointer;
     text-decoration: none;
-    color: var(--accent);
+    color: #283636;
 }
 
 .logo h3 {
@@ -107,7 +109,7 @@ header {
 }
 
 
-li + li {
+.listy + .listy {
     margin-left: 1em;
 }
 
@@ -127,7 +129,7 @@ li + li {
     justify-content: center;
     align-items: center;
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .abs-butt a {
@@ -166,7 +168,7 @@ li + li {
 }
 
 .card {
-    height: 550px;
+    height: 450px;
     width: 30%;
     max-width: 250px;
     background-color: #ffff;
@@ -188,7 +190,7 @@ li + li {
 .card h3 {
     display: flex;
     justify-content: center;
-    padding: 1em;
+    padding: 1em 1em 3em;
     font-weight: 200;
     font-size: 14px;
     align-items: center;
@@ -210,6 +212,9 @@ li + li {
     transition: 500ms;
     border-radius: 5px;
     border: 1px solid black;
+    opacity: 0.9;
+    margin-bottom: 3em;
+    cursor: pointer;
 }
 
 .fubo-img:hover {
@@ -223,6 +228,109 @@ li + li {
     width: 100%;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 3em 0em;
+    background-color: #5b8486;
+}
+
+.gr {
+    display: flex;
+    flex-direction: column;
+    padding: 0em 3em;
+    align-items: center;
+}
+
+.item {
+    margin: 0.5em 0em;
+    text-decoration: none;
+    color: black;
+    font-family: var(--family-5);
+    font-size: 14px;
+    color: #ffff;
+    transition: 300ms;
+}
+
+.item:hover {
+    color: #324849;
+}
+
+.cr {
+    width: 100%;
+    background-color: #5b8486;
+    padding: 0em 0em 2em 0em;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-family: var(--family-5);
+    font-size: 14px;
+}
+
+.menu-tab {
+    position:fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    transition: 800ms;
+}
+
+.tab-list-item {
+    text-decoration: none;
+    color: var(--text);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-block;
+    position: relative;
+    padding: 1.4em 0em 1em;
+    margin: 0em 1em;
+}
+
+.new-nav {
+    display: flex;
+    width: 100%;
+    padding: 2em 0em;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.tab-list-item::before {
+    content: "";
+    height: 3px;
+    bottom: 0px;
+    width: 100%;
+    opacity: 0;
+    transition: 300ms;
+    position: absolute;
+    background-color: var(--accent);
+    left: 0;
+}
+
+.tab-list-item:hover::before {
+    bottom: 7px;
+    opacity: 1;
+}
+
+.close {
+    display: flex;
+    justify-content: end;
+    margin: 0.8em 1.5em;
+    font-size: 38px;
+    transition: 300ms;
+}
+
+.close:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.is-active {
+    left: 0%;
+}
+
 @media (max-width: 750px) {
     .card-wrap {
         display: flex;
@@ -230,17 +338,18 @@ li + li {
         justify-content: center;
         width: 100%;
         align-items: center;
+        margin-top: 5em;
     }
 
     .hamburger {
         display: flex;
+        cursor: pointer;
     }
 
     .card {
         width: 95%;
         max-width: 350px;
         margin-bottom: 2em;
-        height: 500px;
     }
 
     .caravan {
@@ -249,6 +358,23 @@ li + li {
 
     .nav {
         display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0em 4em;
+    }
+
+    .gr {
+        padding: 1em 0em;
+    }
+    .item {
+        display: flex;
+        justify-content: center;
     }
 }
 
