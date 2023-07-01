@@ -30,11 +30,6 @@
     display: none;
 }
 
-
-
-
-
-
 /* Header */
 
 body {
@@ -49,7 +44,7 @@ header {
     color: var(--text);
     position: relative;
     width: 100%;
-    background-image: url('/cb_images/blob-scene-haikei.svg');
+    background-image: url('/cb_images/circle-4.svg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -74,7 +69,6 @@ header {
     font-size: 30px;
     font-family: var(--family-2);
 }
-
 
 .nav {
     display: flex;
@@ -180,17 +174,18 @@ header {
     font-family: var(--family-2);
     display: flex;
     justify-content: center;
-    padding: 1em 0em;
+    padding: 0.3em 0em;
+    font-size: 40px;
     width: 100%;
     background-color: var(--third-accent);
     border-radius: 4px 4px 0px 0px;
-    color: var(--text);
+    color: var(--secondary-accent);
 }
 
 .card h3 {
     display: flex;
     justify-content: center;
-    padding: 1em 1em 3em;
+    padding: 1em 1em 2em;
     font-weight: 200;
     font-size: 14px;
     align-items: center;
@@ -213,7 +208,7 @@ header {
     border-radius: 5px;
     border: 1px solid black;
     opacity: 0.9;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     cursor: pointer;
 }
 
@@ -226,6 +221,7 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
+    padding-top: 1.5em;
 }
 
 .footer {
@@ -329,6 +325,16 @@ header {
 
 .is-active {
     left: 0%;
+}
+
+svg {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #5b8486;
+    justify-content: center;
 }
 
 @media (max-width: 750px) {
