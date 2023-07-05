@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 /* Reusable Styles */
@@ -12,10 +13,8 @@
     --secondary-accent: #e8e2e2;
     --third-accent: #5b8486;
     --text: #283636;
-    --family-1: 'Kablammo', cursive;
+    --family-1: 
     --family-2: 'Limelight', cursive;
-    --family-3: 'Oooh Baby', cursive;
-    --family-4: 'Rubik Moonrocks', cursive;
     --family-5: 'Poppins', sans-serif;
     
 }
@@ -26,6 +25,11 @@
     width: 100%;
 }
 
+.container-small {
+    max-width: 700px;
+}
+
+
 .hidden {
     display: none;
 }
@@ -34,7 +38,6 @@
 
 body {
     position: relative;
-    scroll-behavior: smooth;
 }
 
 header {
@@ -44,7 +47,7 @@ header {
     color: var(--text);
     position: relative;
     width: 100%;
-    background-image: url('/cb_images/circle-4.svg');
+    background-image: url('/cb_images/circle-4\ 1.svg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -73,6 +76,7 @@ header {
 .nav {
     display: flex;
     list-style: none;
+    max-width: 1300px;
 }
 
 .list-item {
@@ -341,8 +345,68 @@ header {
 
 
 .rst {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: #d4d8d9;
+}
+
+.table {
+    width: 90%;
+    max-width: 1100px;
+    background-color: #fff;
     height: 500px;
+    margin: 4em 0em;
+    border-radius: 4px;
+}
+
+.calculate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #324849;
+    padding: 3em 2em;
+}
+
+.call-to-action {
+    height: 100%;
+    color: #fff;
+    width: 70%;
+}
+
+.call-to-action h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;';
+    font-size: 19px;
+    padding-bottom: 1em;
+}
+
+.call-to-action p {
+    font-family: var(--family-5);
+}
+
+.right {
+    display: flex;
+}
+
+.call-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    align-items: center;
+    padding: 0em 2em;
+}
+
+.call-buttons a {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    margin: 1em 0em;
+    padding: 1em 0em;
+    width: 100%;
+    font-weight: bold;
+    background-color: var(--third-accent);
+    
 }
 
 @media (max-width: 750px) {
