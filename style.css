@@ -13,7 +13,7 @@
     --secondary-accent: #e8e2e2;
     --third-accent: #5b8486;
     --text: #283636;
-    --family-1: 
+    --family-1: 'Ruslan Display', cursive;
     --family-2: 'Limelight', cursive;
     --family-5: 'Poppins', sans-serif;
     
@@ -83,6 +83,7 @@ header {
     text-decoration: none;
     color: var(--text);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
     display: inline-block;
     position: relative;
     padding: 1em 0em;
@@ -91,7 +92,7 @@ header {
 
 .list-item::before {
     content: "";
-    height: 3px;
+    height: 4px;
     bottom: 0px;
     width: 100%;
     opacity: 0;
@@ -102,7 +103,7 @@ header {
 }
 
 .list-item:hover::before {
-    bottom: 7px;
+    bottom: 5px;
     opacity: 1;
 }
 
@@ -166,14 +167,10 @@ header {
 
 .card {
     width: 30%;
-    max-width: 250px;
+    max-width: 275px;
     background-color: #ffff;
     border-radius: 4px 4px 0px 0px;
     border: 1px solid black;
-}
-
-.content {
-    height: 150px;
 }
 
 .card h2 {
@@ -199,35 +196,107 @@ header {
 
 .price-size {
     padding: 0em 0.3em;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: 'Manrope', sans-serif;
+    /* font-weight: bold; */
+    font-size: 35px;
+    font-family: var(--family-1);
 
 }
 
 .fubo-img {
-    width: 190px;
-    height: 70px;
+    width: 170px;
+    height: 60px;
+    padding: 0.4em 0em;
     object-fit: cover;
-    border-radius: 0px;
     transition: 500ms;
-    border-radius: 5px;
-    border: 1px solid black;
+    border-radius: 5px 0px 5px 0px;
     opacity: 0.9;
-    margin-bottom: 1em;
     cursor: pointer;
 }
 
-.fubo-img:hover {
-    translate: -5px -5px;
-    box-shadow: 5px 5px black;
+
+.card__price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+/* Card Logo */
 
 .logo-sec {
     display: flex;
     justify-content: center;
+    width: 90%;
+    padding: 0;
+    transition: 400ms;
+    border-radius: 5px 0px 5px 0px;
+    margin-top: 1em;
+    border: 1px solid rgb(128, 128, 128);
+    margin-bottom: 2em;
+}
+
+.logo-sec:hover {
+    translate: -5px -5px;
+    box-shadow: 5px 5px black;
+}
+
+/* Card Ticker */
+
+.ticker-sec {
+    font-family: var(--family-1);
+    display: flex;
     width: 100%;
-    padding-top: 1.5em;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.ticker-wrap {
+    border: 1px solid rgb(128, 128, 128);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.8em 1em 0.8em 1.5em;
+}
+
+.ticker-sec h3 {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    padding: 0em;
+}
+
+/* Card Price */
+
+.price-section {
+    display: flex;
+    font-family: var(--family-1);
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4em;
+}
+
+.price-section__title {
+    border: 1px solid rgb(128, 128, 128);
+    width: 90%;
+    padding: 0.3em;
+    background-color: #e7e7e7;
+}
+
+.price-section__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    border-left: 1px solid rgb(128, 128, 128);
+    border-right: 1px solid rgb(128, 128, 128);
+    border-bottom: 1px solid rgb(128, 128, 128);
+    width: 90%;
+    border-radius: 0px 0px 6px 6px;
+}
+
+.price-section__title h3 {
+    padding: 0em;
 }
 
 .footer {
@@ -286,6 +355,7 @@ header {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: inline-block;
     position: relative;
+    font-size: 18px;
     padding: 1.4em 0em 1em;
     margin: 0em 1em;
 }
@@ -355,8 +425,8 @@ header {
     width: 90%;
     max-width: 1100px;
     background-color: #fff;
-    height: 500px;
-    margin: 4em 0em;
+    min-height: 650px;
+    margin: 5em 0em;
     border-radius: 4px;
 }
 
@@ -392,9 +462,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 30%;
+    width: 35%;
     align-items: center;
-    padding: 0em 2em;
+    padding: 0em 1em;
 }
 
 .call-buttons a {
@@ -406,7 +476,14 @@ header {
     width: 100%;
     font-weight: bold;
     background-color: var(--third-accent);
-    
+    transition: 400ms;
+    border: 1px solid var(--third-accent);
+}
+
+.call-buttons a:hover {
+    background-color: var(--secondary-accent);
+    color: black;
+    border: 1px solid black;
 }
 
 @media (max-width: 750px) {
@@ -457,6 +534,26 @@ header {
     .item {
         display: flex;
         justify-content: center;
+    }
+
+    .container-small {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .call-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 1em;
+    }
+
+    .call-buttons a {
+        width: 55%;
     }
 }
 
